@@ -20,4 +20,24 @@ job('ejemplo-job-DSL-desde-GitHub') {
     shell("bash job-scritp.sh")
   }
   
+  publishers {
+    mailer('agarciaf#outlook.es', true, true)
+    slackNotifier {
+      notifyAborted(true)
+      notifyEveryFailure(true)
+      notifyNotBuilt(false)
+      notifyUnstable(false)
+      notifyBackToNormal(true)
+      notifySuccess(false)
+      notifyRepeatedFailure(false)
+      startNotification(false)
+      includeTestSummary(false)
+      includeCustomMessage(false)
+      customMessage(null)
+      sendAs(null)
+      commitInfoChoice('NONE')
+      teamDomain(null)
+      authToken(null)
+    }
+  
   }
