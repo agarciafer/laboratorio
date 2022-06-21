@@ -21,7 +21,7 @@ job('ejemplo-job-DSL-desde-GitHub') {
   }
   
   publishers {
-    mailer('agarciaf#outlook.es', true, true)
+    mailer('agarciaf@outlook.es', true, true)
     slackNotifier {
       notifyAborted(true)
       notifyEveryFailure(true)
