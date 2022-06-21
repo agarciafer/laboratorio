@@ -41,3 +41,4 @@ job('ejemplo-job-DSL-desde-GitHub') {
     }
   
   }
+}
