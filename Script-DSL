@@ -18,7 +18,7 @@ job('ejemplo-job-DSL') {
     shell("bash job-scritp.sh")
   }
   publishers {
-    mailer('agarciaf#outlook.es', true, true)
+    mailer('agarciaf@outlook.es', true, true)
     slackNotifier {
       notifyAborted(true)
       notifyEveryFailure(true)
